@@ -11,8 +11,6 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: do-block-storage
-  csi:
-    driver: dobs.csi.digitalocean.com
 ---
 apiVersion: v1
 kind: Service
