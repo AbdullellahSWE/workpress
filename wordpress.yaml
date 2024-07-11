@@ -4,6 +4,8 @@ metadata:
   name: wordpress-pv-claim
   labels:
     app: wordpress
+    app.kubernetes.io/instance: abdullellahwordpress
+  name: wordpress-pv-claim
 spec:
   accessModes:
     - ReadWriteOnce
