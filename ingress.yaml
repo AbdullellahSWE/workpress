@@ -4,7 +4,7 @@ metadata:
   name: wordpress-ingress
 spec:
   rules:
-    - host: student1.kubes.fun
+    - host: student99.kubes.fun
       http:
         paths:
           - pathType: Prefix
