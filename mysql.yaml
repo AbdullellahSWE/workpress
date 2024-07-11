@@ -13,6 +13,25 @@ spec:
   storageClassName: do-block-storage
 ---
 apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: volume-nyc1-01
+  annotations:
+    pv.kubernetes.io/provisioned-by: dobs.csi.digitalocean.com
+spec:
+  storageClassName: do-block-storage
+  persistentVolumeReclaimPolicy: Delete  # Change to Delete if you want it to be deleted with the PVC
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: dobs.csi.digitalocean.com
+    volumeHandle: 1952d58a-c714-11e8-bc0c-0a58ac14421e
+    volumeAttributes:
+      com.digitalocean.csi/noformat: "true"
+---
+apiVersion: v1
 kind: Service
 metadata:
   name: mysql
