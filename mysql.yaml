@@ -4,8 +4,6 @@ metadata:
   name: mysql-pv-claim
   labels:
     app: wordpress
-    app.kubernetes.io/instance: abdullellahwordpress
-  name: mysql-pv-claim
 spec:
   accessModes:
     - ReadWriteOnce
